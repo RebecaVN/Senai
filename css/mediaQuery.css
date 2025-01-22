@@ -1,0 +1,287 @@
+/* CSS da pagina de LOGIN */
+@media (max-width: 1095px) {
+    .eclipses  {
+        display: none;
+    }
+    #main_login{
+        display: flex;
+        justify-content: center;
+    }
+    #header_login{
+        position: relative;
+    }
+    .form-box{
+        right: initial;
+        justify-content: center;
+    }
+
+
+}
+
+
+
+/* FIM do CSS da pagina de LOGIN */
+
+/*CSS página index*/
+
+
+@media(max-width:1100px){
+
+    .corpo-index{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-texto{
+        width: 100%;
+    }
+
+    .container-texto h2{
+       font-size: 30px
+    }
+
+    .corpo-index img{
+        width: 90%;
+    }
+
+
+}
+
+
+
+/*Fim CSS página index*/
+
+/* CSS página aluno*/
+
+@media(max-width:700px){
+.corpo-inicial{
+    display: flex;
+    flex-direction: column;
+}
+.pesquisar{
+   width: 95%; 
+  
+}
+
+.topo_inicial img{
+    width: 120px
+}
+
+.corpo-inicial .pesquisa{
+    padding: 0;
+    margin: 0;
+}
+
+.corpo-inicial h2{
+    font-size: 30px;
+}
+
+.aviso h3{
+    font-size: 32px;
+}
+
+.logo-inicial {
+    width: 100px;
+}
+
+.aviso p{
+font-size:16px ;    
+}
+}
+
+
+/*Fim CSS página aluno*/
+
+/* CSS Pagina confirmar Email */
+@media  (max-width:380px){
+    #main_confirmarEmail{
+       padding: 5%;
+    }
+    #main_confirmarEmail .introducao{
+        margin: 8px;
+        text-align: justify;
+    }
+    #main_confirmarEmail #codigoVerificacao{
+        width: 100%;
+    }
+}
+
+/* FIM CSS Pagina confirmar Email */
+
+/* CSS HOME GESTAO*/
+@media (max-width: 991px){
+    #main_homeGestao .titulo{
+        margin-top: 100px;
+        padding: 1%;
+        background-color: #f5f5f5;
+ 
+    } 
+    #main_homeGestao .section_cards {
+        margin-top: -80px;
+    }
+   
+}
+/*FIM  CSS HOME GESTAO*/
+
+/* Footer */
+@media (max-width: 1400px){
+    footer{
+        padding: 40px;
+        bottom: 0;
+    }
+
+
+}
+@media (max-width: 991px){
+  
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .escola{
+   height: 100%;
+    
+}
+
+footer .escola img{
+    width: 100px;
+    height: 30px;
+
+}
+
+footer p{
+    font-size: 14px;
+}
+
+footer .contatos{
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+footer .icones{
+    display: flex;
+    gap: 5px;
+   
+   
+
+}
+
+
+    }
+/* Fim Footer */
+
+
+/* MEDIA DAS TABELAS */
+@media screen and (max-width: 991px){
+    .table__thead {
+      display: none;
+    }
+    .table-row {
+      display: inline-block;
+      border: 0;
+      background-color: #fff;
+      width: 30vw;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .table-row__img {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 10px;
+  }
+    
+    .table-row__td:before{
+      content:attr(data-column);
+      color: #9eabb4;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      display: block;
+    }
+    
+    .table-row__info {
+      display: block;
+      padding-left: 0;
+    }
+    
+    .table-row__td {
+      display: block;
+      text-align: center;
+      padding: 8px !important;
+    }
+    .table-row--red {
+      background-color: #fff2f2;
+    }
+    .table__select-row{
+      display: none;
+    }
+    
+    .table-row--overdue {
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: translateY(0%);
+      height: 4px;
+      }
+  }
+  
+  
+  @media screen and (max-width: 680px){
+    .table-row {
+        width: 30vw;
+    }
+    .row__title{
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+   
+  }
+  
+  @media screen and (max-width: 480px){
+    .table-row {
+      width: 100%;
+    }
+  }
+  /* MEDIA DAS TABELAS */
+
+
+  /* HOME PROFESSOR MEDIA */
+  @media screen and (max-width: 761px){
+    .form_cadastrarTurma .container, .w3-modal-content{
+        width: 77vw;
+    }
+  }
+  /* FIM HOME PROFESSOR MEDIA */
+
+  /*MEDIA CADASTRAR MAQUINA*/
+@media screen and (max-width: 600px){
+    .box{
+       padding: 10px;
+    }
+    
+    }
+    
+    /*MEDIA CADASTRAR MAQUINA*/
+
+
+ /*CSS VISUALIZAR MAQUINA*/
+@media screen and (max-width: 991px){
+    .container-infoMaq{
+      flex-direction: column;
+      margin-bottom: 25px;
+    }
+
+}
+
+
+/*CSS VISUALIZAR MAQUINA*/   
+
+

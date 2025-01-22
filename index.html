@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>SENAI - Landing</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png"/>
+    <link rel="stylesheet" href="css/mediaQuery.css" />
+    <style>
+      
+  </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body class="index">
+    <header class="topo-index">
+      <img width="200" class="logo-inicial" src="img/svg/logo_senai_vermelho.svg" />
+      <hr />
+    </header>
+
+    <main class="corpo-index">
+      <section class="imagem-index">
+        <img src="img/imagem-index.png" alt="" />
+      </section>
+
+      <div class="container-texto">
+        <h2>Seja bem vindo(a)</h2>
+        <p>
+          O projeto tem como intuito principal proporcionar aos alunos e
+          professores da instituição a maior facilidade de monitoramento das
+          máquinas utilizadas em aula.
+        </p>
+        <button onclick="window.location.href = 'login.php'" class="entrar-index">Entrar</button>
+      </div>
+    </main>
+    <footer>
+      <div class="escola">
+        <img width="150" height="40" src="img/logo-senai-branco.png" alt="" />
+
+        <div class="escola-info">
+          <p>Escola Senai "Nami Jafet"</p>
+          <br />
+          <p>Mogi das Cruzes/SP</p>
+        </div>
+      </div>
+      <div class="contatos">
+        <div class="icones">
+        <i class="fa fa-facebook-square" style=" font-size: 30px;"></i>
+        <i class="fa fa-envelope" style=" font-size: 30px;"></i>
+      </div>
+        <p>Telefone:(11)4728-3900</p>
+      </div>
+    </footer>
+
+    <script src="js/reveal.js"></script>
+    <script>
+      //mascara CPF
+      function mascara(i) {
+        var v = i.value;
+        if (isNaN(v[v.length - 1])) {
+          // impede entrar outro caractere que não seja número
+          i.value = v.substring(0, v.length - 1);
+          return;
+        }
+  
+        i.setAttribute("maxlength", "14");
+        if (v.length == 3 || v.length == 7) i.value += ".";
+        if (v.length == 11) i.value += "-";
+      }
+  
+      ///////
+  
+      const botaoCriarConta = document.getElementById("submitCadastrarGestor");
+  
+      const inputSenha = document.getElementById("senhaCadastro");
+      const inputConfirmarSenha = document.getElementById(
+        "confirmarSenhaCadastro"
+      );
+  
+      const comparacaoSenhasP = document.getElementById("comparacaoSenhas");
+      const verificacaoNomeCompletoP = document.getElementById(
+        "verificacaoNomeCompleto"
+      );
+  
+      const inputNomeCompleto = document.getElementById("nome");
+  
+      inputSenha.addEventListener("input", validarCadastro);
+      inputConfirmarSenha.addEventListener("input", validarCadastro);
+      inputNomeCompleto.addEventListener("input", validarCadastro);
+  
+      //verifca se as senhas conferem e se nao esta digitando apenas um nome
+      function validarCadastro() {
+        const palavrasinputNomeCompleto = inputNomeCompleto.value
+          .split(/\s+/)
+          .filter(Boolean).length;
+  
+        comparacaoSenhasP.style.display =
+          inputSenha.value === inputConfirmarSenha.value ? "none" : "block";
+  
+        verificacaoNomeCompletoP.style.display =
+          palavrasinputNomeCompleto > 1 ? "none" : "block";
+  
+        const inputCPF = document.getElementById("cpf");
+        const verificacaoCPF_p = document.getElementById("verificacaoCPF_p");
+  
+        inputCPF.addEventListener("input", function () {
+          var comprimentoCPF = inputCPF.value.length;
+          verificacaoCPF_p.style.display = comprimentoCPF < 11 ? "block" : "none";
+        });
+        if (
+          inputSenha.value === inputConfirmarSenha.value &&
+          palavrasinputNomeCompleto > 1 &&
+          comprimentoCPF == 11
+        ) {
+          botaoCriarConta.removeAttribute("disabled");
+        } else {
+          botaoCriarConta.setAttribute("disabled", "true");
+        }
+      }
+      ///////////////////////////
+    </script>
+  </body>
+</html>
