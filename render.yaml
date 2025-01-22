@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nome-do-seu-projeto
+    env: ubuntu
+    buildCommand: |
+      sudo apt-get update
+      sudo apt-get install -y php-cli
+    startCommand: php -S 0.0.0.0:8000
+    plan: free
